@@ -3,7 +3,7 @@ export interface AppVersion {
     name: string
     versionCode: string
     versionNumber: string
-    tags: string[]
+    tags: string
     flag: AppVersionFlag
     changelog: string
     filePath: File | null

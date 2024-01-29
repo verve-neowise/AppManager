@@ -14,7 +14,7 @@ export default class AppVersionService {
         formData.append('name', app.name);
         formData.append('versionCode', app.versionCode);
         formData.append('versionNumber', app.versionNumber);
-        formData.append('tags', app.tags.join(','));
+        formData.append('tags', app.tags);
         formData.append('flag', app.flag);
         formData.append('changelog', app.changelog);
         
@@ -36,7 +36,7 @@ export default class AppVersionService {
         formData.append('name', app.name);
         formData.append('versionCode', app.versionCode);
         formData.append('versionNumber', app.versionNumber);
-        formData.append('tags', app.tags.join(','));
+        formData.append('tags', app.tags);
         formData.append('flag', app.flag);
         formData.append('changelog', app.changelog);
 

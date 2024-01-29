@@ -58,7 +58,7 @@ export const useAppVersionViewModel: () => AppVersionViewModel = () => {
     const getApps = () => request(async () => {
         const result = await AppService.allApps()
         return {
-            apps: result.apps
+            apps: result.apps.map((app: AppVersion) => { return { ...app, tags: app.tags.split(":") } })
         }
     })
 
