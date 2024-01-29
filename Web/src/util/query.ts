@@ -1,7 +1,7 @@
 import axios, { Axios, AxiosResponse } from "axios";
 
 const _axios = axios.create({
-    baseURL: 'http://localhost:53001/api/v1'
+    baseURL: 'http://54.246.238.84:3050/api/v1'
 })
 
 _axios.interceptors.request.use(config => {

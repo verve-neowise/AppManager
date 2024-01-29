@@ -19,7 +19,7 @@ export default createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Navigate to="/remote-lock"/>
+                element: <Navigate to="/app-version"/>
             },
             {
                 path: "/app-version",
