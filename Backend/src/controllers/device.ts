@@ -1,4 +1,3 @@
-import { DeviceStatus } from '@prisma/client';
 import { createDevice, findDevice, findDeviceByIdAndModel, findDeviceByUserIdAndModel, findDevices, removeDevice, setLockDevice, setUnlockDevice, updateDevice, updateDeviceStatus, updateDeviceSync } from '@services/device.service';
 import catchAsync from '@utils/catchAsync';
 
@@ -36,7 +35,7 @@ export const registerDevice = catchAsync(async (req, res, next) => {
             model,
             deviceId,
             phoneNumber: phone,
-            status: DeviceStatus.unlocked,
+            status: "unlocked",
             lockSignature,
             unlockSignature
         })
@@ -51,7 +50,7 @@ export const putDeviceStatus = catchAsync(async (req, res, next) => {
         const device = await findDeviceByIdAndModel(String(id), String(model))
 
         if (device) {
-            await updateDeviceStatus(device.id, String(status) as DeviceStatus)
+            await updateDeviceStatus(device.id, String(status) as ("locked" | "unlocked"))
         }
         else {
             res.send("Not found")

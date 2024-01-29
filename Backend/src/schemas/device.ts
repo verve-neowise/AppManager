@@ -1,4 +1,3 @@
-import { DeviceStatus } from '@prisma/client'
 import joi from 'joi'
 
 export const deviceSchema = joi.object({
@@ -6,13 +5,13 @@ export const deviceSchema = joi.object({
     "userId": joi.number().min(3).required(),
     "model": joi.string().min(3).required(),
     "phoneNumber": joi.string().min(3).required(),
-    "status": joi.string().valid(DeviceStatus.locked, DeviceStatus.unlocked)
+    "status": joi.string().valid('locked', "unlocked")
 })
 
 export const statusSchema = joi.object({
     "id": joi.number().min(3).required(),
     "model": joi.string().min(3).required(),
-    "status": joi.string().valid(DeviceStatus.locked, DeviceStatus.unlocked).required(),
+    "status": joi.string().valid("locked", "unlocked").required(),
 })
 
 export const syncSchema = joi.object({

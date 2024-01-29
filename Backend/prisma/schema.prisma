@@ -4,7 +4,7 @@ generator pacient {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -38,18 +38,18 @@ model App {
   name          String
   versionCode   String
   versionNumber String
-  tags          String[]
-  flag          AppVersionFlag
+  tags          String
+  flag          String
   changelog     String
   downloadPath  String?
   owner         String
 }
 
-enum AppVersionFlag {
-  production
-  feature
-  bugfix
-}
+// enum AppVersionFlag {
+//   production
+//   feature
+//   bugfix
+// }
 
 model Device {
   id          Int          @id @default(autoincrement())
@@ -61,10 +61,10 @@ model Device {
   phoneNumber String
   lockSignature String?
   unlockSignature String?
-  status      DeviceStatus
+  status      String
 }
 
-enum DeviceStatus {
-  locked
-  unlocked
-}
+// enum DeviceStatus {
+//   locked
+//   unlocked
+// }

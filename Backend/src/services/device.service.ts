@@ -1,4 +1,3 @@
-import { DeviceStatus } from '@prisma/client'
 import prisma from './db'
 
 interface CreateParams {
@@ -7,7 +6,7 @@ interface CreateParams {
     deviceId?: string
     model: string
     phoneNumber: string
-    status: DeviceStatus
+    status: "locked" | "unlocked"
     lockSignature?: string
     unlockSignature?: string
 }
@@ -99,7 +98,7 @@ export const updateDevice = async (id: number, params: CreateParams) => {
 }
 
 
-export const updateDeviceStatus = async (id: number, status: DeviceStatus) => {
+export const updateDeviceStatus = async (id: number, status: "locked" | "unlocked") => {
 
     return prisma.device.update({
         where: {

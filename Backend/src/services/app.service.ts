@@ -1,4 +1,3 @@
-import { AppVersionFlag } from '@prisma/client'
 import prisma from './db'
 
 interface CreateParams {
@@ -6,7 +5,7 @@ interface CreateParams {
     versionCode: string
     versionNumber: string
     tags: string[]
-    flag: AppVersionFlag
+    flag: "production" | "bugfix" | "feature"
     changelog: string
     filePath?: string
     owner: string
@@ -34,7 +33,7 @@ export const createApp = (params: CreateParams) => {
             versionCode: params.versionCode,
             versionNumber: params.versionNumber,
             downloadPath: params.filePath,
-            tags: params.tags
+            tags: params.tags.join(":")
         }
     })
 }
@@ -53,7 +52,7 @@ export const updateApp = async (id: number, params: CreateParams) => {
             versionCode: params.versionCode,
             versionNumber: params.versionNumber,
             downloadPath: params.filePath,
-            tags: params.tags
+            tags: params.tags.join(":")
         }
     })
 }
