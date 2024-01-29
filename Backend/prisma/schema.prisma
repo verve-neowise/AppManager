@@ -1,0 +1,70 @@
+generator pacient {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String
+}
+
+model Account {
+  id       Int    @id @default(autoincrement())
+  email    String
+  password String
+  host     Host?  @relation(fields: [hostId], references: [id], onDelete: NoAction)
+  hostId   Int?
+}
+
+model Host {
+  id          Int       @id @default(autoincrement())
+  hostName    String
+  description String
+  baseUrl     String
+  filesUrl    String @default("")
+  active      Boolean
+  accounts    Account[]
+}
+
+model App {
+  id            Int            @id @default(autoincrement())
+  name          String
+  versionCode   String
+  versionNumber String
+  tags          String[]
+  flag          AppVersionFlag
+  changelog     String
+  downloadPath  String?
+  owner         String
+}
+
+enum AppVersionFlag {
+  production
+  feature
+  bugfix
+}
+
+model Device {
+  id          Int          @id @default(autoincrement())
+  name        String
+  userId      Int
+  model       String
+  deviceId    String
+  lastSync    DateTime @default(now())
+  phoneNumber String
+  lockSignature String?
+  unlockSignature String?
+  status      DeviceStatus
+}
+
+enum DeviceStatus {
+  locked
+  unlocked
+}
