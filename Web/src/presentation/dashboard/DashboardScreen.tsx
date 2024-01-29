@@ -14,11 +14,11 @@ const navItems: NavItem[] = [
         icon: <LayoutGrid />,
         title: "App Versions"
     },
-    {
-        route: "/remote-lock",
-        icon: <Lock />,
-        title: "Remote Lock"
-    }
+    // {
+    //     route: "/remote-lock",
+    //     icon: <Lock />,
+    //     title: "Remote Lock"
+    // }
 ]
 
 function DashboardScreen() {

@@ -29,10 +29,10 @@ export default createBrowserRouter([
                 path: "/hosts",
                 element: <HostsDestination/>
             },
-            {
-                path: "/remote-lock",
-                element: <RemoteLockDestination/>
-            }
+            // {
+            //     path: "/remote-lock",
+            //     element: <RemoteLockDestination/>
+            // }
         ]
     }
 ])
