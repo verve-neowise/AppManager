@@ -1,0 +1,600 @@
+{
+    ConstraintSets: {
+        start: {
+            avatar: {
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top'],
+                bottom: ['parent', 'bottom'],
+            },
+            callMode: {
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                height: 0
+            },
+            generalInfo: {
+                height: 0
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -200],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        Incoming: {
+            avatar: {
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top', 24],
+            },
+            callMode: {
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                height: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['displayName', 'bottom', 8]
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', 36],
+                bottom: ['parent', 'bottom', 48]
+            },
+            reject: {
+                end: ['parent', 'end', 36],
+                bottom: ['parent', 'bottom', 48]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                scaleY: 0,
+                scaleX: 0,
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        Outgoing: {
+            avatar: {
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top', 24],
+            },
+            callMode: {
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                height: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['displayName', 'bottom', 8]
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', -24]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                top: ['actions', 'bottom', 16],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        Active: {
+            avatar: {
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top', 24],
+            },
+            callMode: {
+                height: 0,
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['displayName', 'bottom', 8]
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                top: ['actions', 'bottom', 16],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        OnHold: {
+            avatar: {
+                alpha: 0.5,
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top', 24],
+            },
+            callMode: {
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                alpha: 0.5,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                alpha: 0.5,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['displayName', 'bottom', 8]
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                top: ['actions', 'bottom', 16],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        IncomingSecondLine: {
+            avatar: {
+                alpha: 0.5,
+                height: 72, width: 72,
+                start: ['parent', 'start'],
+                top: ['parent', 'top', 32],
+            },
+            displayName: {
+                alpha: 0.5,
+                start: ['avatar', 'end', 8],
+                top: ['avatar', 'top'],
+            },
+            callMode: {
+                alpha: 0.5,
+                start: ['displayName', 'start'],
+                top: ['displayName', 'bottom']
+            },
+            timer: {
+                alpha: 0.5,
+                start: ['callMode', 'start'],
+                top: ['callMode', 'bottom']
+            },
+            generalInfo: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['avatar', 'bottom'],
+                bottom: ['holdAccept', 'top'],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', 14],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', 14],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', 16],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                scaleY: 0,
+                scaleX: 0,
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        ActiveSecondLine: {
+            secondLineHold: {
+                alpha: 0.5,
+                start: ['parent', 'start'],
+                top: ['parent', 'top', 0],
+            },
+            avatar: {
+                height: 64, width: 64,
+                start: ['secondLineHold', 'start'],
+                top: ['secondLineHold', 'bottom', 8],
+            },
+            displayName: {
+                start: ['avatar', 'end', 12],
+                top: ['avatar', 'top']
+            },
+            callMode: {
+                start: ['displayName', 'start'],
+                top: ['displayName', 'bottom']
+            },
+            timer: {
+                start: ['displayName', 'start'],
+                top: ['callMode', 'bottom']
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                top: ['actions', 'bottom', 16],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                scaleY: 0,
+                scaleX: 0,
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        },
+        Disconnected: {
+            avatar: {
+                height: 96, width: 96,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['parent', 'top', 32],
+            },
+            callMode: {
+                start: ['parent', 'start', 24],
+                end: ['parent', 'end', 24],
+                top: ['avatar', 'bottom', 16]
+            },
+            displayName: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['callMode', 'bottom', 8]
+            },
+            timer: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['displayName', 'bottom', 8]
+            },
+            generalInfo: {
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 24]
+            },
+            secondLine: {
+                scaleY: 0,
+                scaleX: 0,
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+                top: ['timer', 'bottom', 32],
+                bottom: ['holdAccept', 'top', 12],
+            },
+            accept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            reject: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            holdAccept: {
+                start: ['parent', 'start', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            declineAccept: {
+                end: ['parent', 'end', -300],
+                bottom: ['parent', 'bottom', 124]
+            },
+            merge: {
+                bottom: ['parent', 'bottom', -200],
+                start: ['parent', 'start'],
+                end: ['parent', 'end']
+            },
+            bottomActions: {
+                bottom: ['parent', 'bottom', -300],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            disconnectedActions: {
+                top: ['generalInfo', 'bottom', 64],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            },
+            actions: {
+                scaleY: 0,
+                scaleX: 0,
+                bottom: ['parent', 'bottom', 124],
+                start: ['parent', 'start'],
+                end: ['parent', 'end'],
+            }
+        }
+    }
+}
